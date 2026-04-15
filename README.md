@@ -68,6 +68,18 @@ During implementation, there were issues related to local setup, authentication 
 
 ---
 
+## Screenshots
+
+### Login Page
+![Login Page](statistics_app/screenshots/login.png)
+
+### Dashboard
+![Dashboard](statistics_app/screenshots/dashboard.png)
+
+### React Note
+The task mentioned using React for redesign. In this submission, the UI/UX improvements were implemented on top of the existing Django template-based frontend to preserve the current structure and working flow. The redesign follows a component-oriented structure and can be adapted to a React frontend in a future iteration.
+
+
 ## Setup Instructions
 
 ### 1. Clone the repository
