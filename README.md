@@ -43,5 +43,5 @@ This project improves the existing Django-based workshop booking system by redes
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/rashiii21/workshop-booking.git
+git clone https://github.com/FOSSEE/workshop_booking
 cd workshop-booking
