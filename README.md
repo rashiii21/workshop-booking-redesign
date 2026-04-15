@@ -34,11 +34,8 @@ This project improves the existing Django-based workshop booking system by redes
 
 ## 📸 Screenshots
 
-### 🔐 Login Page
-![Login Page](screenshots/login.png)
-
-### 📊 Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Login Page](statistics_app/screenshots/login.png)
+![Dashboard](statistics_app/screenshots/dashboard.png)
 
 ---
 
