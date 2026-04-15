@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOSSEE Workshops</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'workshop_app/css/bootstrap.min.css' %}">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="{% static 'workshop_app/css/base.css' %}">
+    
+    <!-- Toastr -->
+    <link rel="stylesheet" href="{% static 'workshop_app/css/toastr.min.css' %}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'workshop_app/css/font-awesome.css' %}">
+
+    {% block extra-dependencies %}{% endblock %}
+</head>
+
+<body>
+
+<!-- 🔷 Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background:#1f2937;">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">FOSSEE Workshops</a>
+  </div>
+</nav>
+
+<!-- 🔷 Main Content -->
+<div class="base-content">
+    {% block content %}
+    <h1>Base Template Content. Please override.</h1>
+    {% endblock %}
+</div>
+
+<!-- 🔷 Scripts -->
+<script src="{% static 'workshop_app/js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'workshop_app/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'workshop_app/js/toastr.min.js' %}"></script>
+
+<!-- 🔷 Django Messages (FIXED) -->
+<script>
+  {% if messages %}
+    {% for message in messages %}
+      toastr["{{ message.tags|default:'info' }}"]("{{ message|escapejs }}");
+    {% endfor %}
+  {% endif %}
+</script>
+
+<!-- 🔷 Footer -->
+<footer style="background:#111827; color:#9ca3af; text-align:center; padding:10px; font-size:14px; margin-top:40px;">
+  Developed by FOSSEE group, IIT Bombay
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% extends 'workshop_app/base.html' %}
+{% load static %}
+
+{% block extra-dependencies %}
+<link rel="stylesheet" href="{% static 'workshop_app/css/login-enhanced.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="login-page">
+  <div class="container login-shell">
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-12 col-md-8 col-lg-6">
+        
+        <div class="login-card">
+          
+          <div class="login-header text-center">
+            <div class="login-badge">Workshop</div>
+            <h2 class="login-title">Create Workshop Type</h2>
+            <p class="login-subtitle">Add a new workshop category</p>
+          </div>
+
+          <form method="post" class="login-form">
+            {% csrf_token %}
+
+            <div class="form-group">
+              <label>Workshop Name</label>
+              {{ form.name }}
+              <div class="text-danger small">{{ form.name.errors }}</div>
+            </div>
+
+            <div class="form-group">
+              <label>Duration</label>
+              {{ form.duration }}
+              <div class="text-muted small">{{ form.duration.help_text }}</div>
+              <div class="text-danger small">{{ form.duration.errors }}</div>
+            </div>
+
+            <div class="form-group">
+              <label>Description</label>
+              {{ form.description }}
+              <div class="text-danger small">{{ form.description.errors }}</div>
+            </div>
+
+            <div class="form-group">
+              <label>Terms & Conditions</label>
+              {{ form.terms_and_conditions }}
+              <div class="text-danger small">{{ form.terms_and_conditions.errors }}</div>
+            </div>
+
+            <button type="submit" class="btn login-btn w-100 mt-3">
+              Create Workshop
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
